@@ -61,3 +61,7 @@ resource "aws_security_group" "bastian_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+resource "aws_key_pair" "key" {
+  key_name = "bastain-key"
+  public_key = file(var.public_key_path)
+}
