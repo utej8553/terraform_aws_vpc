@@ -7,3 +7,6 @@ resource "aws_vpc" "main"{
     Name = "custom-vpc"
   }
 }
+resource "aws_internet_gateway" "igw"{
+  vpc_id = aws_vpc.main.id
+}
